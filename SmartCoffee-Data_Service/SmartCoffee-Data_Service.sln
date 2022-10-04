@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 25.0.1703.6
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartCoffee-Data_Service", "SmartCoffee-Data_Service\SmartCoffee-Data_Service.csproj", "{B15BC3B2-98D4-4671-B371-53BAEB57A6CC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartCoffee-Data_Service.UnitTest", "SmartCoffee-Data_Service.UnitTest\SmartCoffee-Data_Service.UnitTest.csproj", "{CDB1D06D-C78D-4FE9-A400-66CE4F26CD30}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartCoffee-Data_Service.IntegrationTest", "SmartCoffee-Data_Service.IntegrationTest\SmartCoffee-Data_Service.IntegrationTest.csproj", "{18279AEF-8F83-477F-BD6D-D163405E113F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartCoffee-Data_Service.Services", "SmartCoffee-Data_Service.Services\SmartCoffee-Data_Service.Services.csproj", "{984879E6-574C-43F3-A4EF-A790CCACE577}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartCoffee-Data_Service.Domain", "SmartCoffee-Data_Service.Domain\SmartCoffee-Data_Service.Domain.csproj", "{608C9D3F-E37C-4935-AC55-0F303167AA06}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartCoffee-Data_Service.Persistence", "SmartCoffee-Data_Service.Persistence\SmartCoffee-Data_Service.Persistence.csproj", "{39FAD89B-352B-4459-813D-5BD1BA91F6A5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B15BC3B2-98D4-4671-B371-53BAEB57A6CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B15BC3B2-98D4-4671-B371-53BAEB57A6CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B15BC3B2-98D4-4671-B371-53BAEB57A6CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B15BC3B2-98D4-4671-B371-53BAEB57A6CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CDB1D06D-C78D-4FE9-A400-66CE4F26CD30}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CDB1D06D-C78D-4FE9-A400-66CE4F26CD30}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CDB1D06D-C78D-4FE9-A400-66CE4F26CD30}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CDB1D06D-C78D-4FE9-A400-66CE4F26CD30}.Release|Any CPU.Build.0 = Release|Any CPU
+		{18279AEF-8F83-477F-BD6D-D163405E113F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{18279AEF-8F83-477F-BD6D-D163405E113F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{18279AEF-8F83-477F-BD6D-D163405E113F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{18279AEF-8F83-477F-BD6D-D163405E113F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{984879E6-574C-43F3-A4EF-A790CCACE577}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{984879E6-574C-43F3-A4EF-A790CCACE577}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{984879E6-574C-43F3-A4EF-A790CCACE577}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{984879E6-574C-43F3-A4EF-A790CCACE577}.Release|Any CPU.Build.0 = Release|Any CPU
+		{608C9D3F-E37C-4935-AC55-0F303167AA06}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{608C9D3F-E37C-4935-AC55-0F303167AA06}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{608C9D3F-E37C-4935-AC55-0F303167AA06}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{608C9D3F-E37C-4935-AC55-0F303167AA06}.Release|Any CPU.Build.0 = Release|Any CPU
+		{39FAD89B-352B-4459-813D-5BD1BA91F6A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{39FAD89B-352B-4459-813D-5BD1BA91F6A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{39FAD89B-352B-4459-813D-5BD1BA91F6A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{39FAD89B-352B-4459-813D-5BD1BA91F6A5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {072BD240-ED9F-48FE-92AB-4CA42554207D}
+	EndGlobalSection
+EndGlobal
