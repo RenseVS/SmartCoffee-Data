@@ -7,7 +7,7 @@ jobs:
     steps:
       - checkout
       - run:
-          working_directory: OEF-Social_Service/OEF-Social_Service
+          working_directory: OSmartCoffee-Data_Service/SmartCoffee-Data_Service
           name: build solution
           command: | 
             dotnet restore
@@ -18,7 +18,7 @@ jobs:
     steps:
       - checkout
       - run:
-          working_directory: OEF-Social_Service/OEF-Social_Service.XIntegration
+          working_directory: SmartCoffee-Data_Service/SmartCoffee-Data_Service.IntegrationTest
           name: Run integrationtests
           command: dotnet test
   integrationtest:
@@ -27,7 +27,7 @@ jobs:
     steps:
       - checkout
       - run:
-          working_directory: OEF-Social_Service/OEF-Social_Service.Services.XUnit
+          working_directory: SmartCoffee-Data_Service/SmartCoffee-Data_Service.UnitTest
           name: Run unittests
           command: dotnet test
   dockerbuild:
