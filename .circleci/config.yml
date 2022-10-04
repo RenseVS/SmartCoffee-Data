@@ -7,7 +7,7 @@ jobs:
     steps:
       - checkout
       - run:
-          working_directory: OSmartCoffee-Data_Service/SmartCoffee-Data_Service
+          working_directory: SmartCoffee-Data_Service/SmartCoffee-Data_Service
           name: build solution
           command: | 
             dotnet restore
