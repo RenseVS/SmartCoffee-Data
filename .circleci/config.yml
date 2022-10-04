@@ -1,0 +1,78 @@
+version: 2.1
+
+jobs:
+  build:
+    docker:
+      - image: mcr.microsoft.com/dotnet/sdk:6.0
+    steps:
+      - checkout
+      - run:
+          working_directory: OEF-Social_Service/OEF-Social_Service
+          name: build solution
+          command: | 
+            dotnet restore
+            dotnet build
+  unittest:
+    docker:
+      - image: mcr.microsoft.com/dotnet/sdk:6.0
+    steps:
+      - checkout
+      - run:
+          working_directory: OEF-Social_Service/OEF-Social_Service.XIntegration
+          name: Run integrationtests
+          command: dotnet test
+  integrationtest:
+    docker:
+      - image: mcr.microsoft.com/dotnet/sdk:6.0
+    steps:
+      - checkout
+      - run:
+          working_directory: OEF-Social_Service/OEF-Social_Service.Services.XUnit
+          name: Run unittests
+          command: dotnet test
+  dockerbuild:
+    docker:
+      - image: mcr.microsoft.com/dotnet/sdk:6.0
+    steps:
+      - checkout
+  dockerrelease:
+    docker:
+      - image: mcr.microsoft.com/dotnet/sdk:6.0
+    steps:
+      - checkout
+  sonarqube:
+    docker:
+      - image: mcr.microsoft.com/dotnet/sdk:6.0
+    steps:
+      - checkout
+  
+
+workflows:
+  build:
+    jobs:
+      - build
+      - dockerbuild
+      - unittest:
+          requires: 
+            - build
+            - dockerbuild
+      - integrationtest:
+          requires: 
+            - build
+            - dockerbuild
+      - sonarqube:
+          filters:
+            branches:
+              only: 
+                - main
+                - develop
+          requires: 
+            - unittest
+            - integrationtest
+      - dockerrelease:
+          filters:
+            branches:
+              only: 
+                - main
+          requires: 
+            - sonarqube
