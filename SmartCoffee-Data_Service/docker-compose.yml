@@ -5,4 +5,4 @@ services:
     image: ${DOCKER_REGISTRY-}smartcoffeedataservice
     build:
       context: .
-      dockerfile: SmartCoffee-Data_Service/Dockerfile
+      dockerfile: Dockerfile

@@ -7,7 +7,7 @@ EXPOSE 80
 FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
 WORKDIR /src
 COPY ["SmartCoffee-Data_Service/SmartCoffee-Data_Service.csproj", "SmartCoffee-Data_Service/"]
-COPY ["SmartCoffee-Data_Service.Service/SmartCoffee-Data_Service.Service.csproj", "SmartCoffee-Data_Service.Service/"]
+COPY ["SmartCoffee-Data_Service.Services/SmartCoffee-Data_Service.Services.csproj", "SmartCoffee-Data_Service.Services/"]
 COPY ["SmartCoffee-Data_Service.Domain/SmartCoffee-Data_Service.Domain.csproj", "SmartCoffee-Data_Service.Domain/"]
 COPY ["SmartCoffee-Data_Service.Persistence/SmartCoffee-Data_Service.Persistence.csproj", "SmartCoffee-Data_Service.Persistence/"]
 RUN dotnet restore "SmartCoffee-Data_Service/SmartCoffee-Data_Service.csproj"
