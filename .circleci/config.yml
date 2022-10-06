@@ -46,10 +46,10 @@ jobs:
   sonarqube:
     docker:
       - image: mcr.microsoft.com/dotnet/sdk:6.0
-    working_directory: SmartCoffee-Data_Service/SmartCoffee-Data_Service
     steps:
       - checkout
       - run:
+          working_directory: SmartCoffee-Data_Service/SmartCoffee-Data_Service
           name: Install & Run SonarScan and publish to sonarcloud
           command: |
             dotnet new tool-manifest
