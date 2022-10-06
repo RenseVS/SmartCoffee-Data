@@ -53,10 +53,9 @@ jobs:
           name: build solution
           command: | 
             dotnet tool install --global dotnet-sonarscanner
-            dotnet restore
-            dotnet build
-      - sonarcloud/scan:
-          project_root: SmartCoffee-Data_Service/SmartCoffee-Data_Service
+            dotnet sonarscanner begin /k:"RenseVS_SmartCoffee-Data" /d:sonar.login="8f642fc97980302376b5044d4741e04ccb3c6976"
+            dotnet build SmartCoffee-Data_Service.sln
+            dotnet sonarscanner end /d:sonar.login="8f642fc97980302376b5044d4741e04ccb3c6976"
 
   
 
