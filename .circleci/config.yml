@@ -45,16 +45,16 @@ jobs:
       - checkout
   sonarqube:
     docker:
-      - image: mcr.microsoft.com/dotnet/sdk:6.0
+      - image: 'node:latest'
     steps:
       - checkout
       - run:
           working_directory: SmartCoffee-Data_Service/SmartCoffee-Data_Service
           name: build solution
           command: | 
-            dotnet restore
-            dotnet build
-      - sonarcloud/scan
+            npm install
+      - sonarcloud/scan:
+          project_root: SmartCoffee-Data_Service/SmartCoffee-Data_Service
 
   
 
