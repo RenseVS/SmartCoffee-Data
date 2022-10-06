@@ -53,7 +53,6 @@ jobs:
           name: build solution
           command: | 
             export PATH="${PATH}:/root/.dotnet/tools"
-            dotnet new tool-manifest
             dotnet tool install --global dotnet-sonarscanner
             dotnet sonarscanner begin /k:"RenseVS_SmartCoffee-Data" /d:sonar.login="8f642fc97980302376b5044d4741e04ccb3c6976"
             dotnet build
