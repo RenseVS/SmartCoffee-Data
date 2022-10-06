@@ -52,6 +52,7 @@ jobs:
           working_directory: SmartCoffee-Data_Service/SmartCoffee-Data_Service
           name: build solution
           command: | 
+            apt-get install unzip
             dotnet restore
             dotnet build
       - sonarcloud/scan
