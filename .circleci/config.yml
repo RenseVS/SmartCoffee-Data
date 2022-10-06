@@ -13,7 +13,6 @@ jobs:
           working_directory: SmartCoffee-Data_Service/SmartCoffee-Data_Service
           name: build solution
           command: | 
-            dotnet tool install --global dotnet-sonarscanner
             dotnet restore
             dotnet build
   unittest:
@@ -53,6 +52,7 @@ jobs:
           working_directory: SmartCoffee-Data_Service/SmartCoffee-Data_Service
           name: build solution
           command: | 
+            dotnet tool install --global dotnet-sonarscanner
             dotnet restore
             dotnet build
       - sonarcloud/scan:
