@@ -48,18 +48,20 @@ jobs:
       - image: mcr.microsoft.com/dotnet/sdk:6.0
     steps:
       - checkout
-      - dotnet-sonarscanner/sonar-install
-      - dotnet-sonarscanner/sonar-begin:
-          sonar_project_key: RenseVS_SmartCoffee-Data
-          sonar_login: 8f642fc97980302376b5044d4741e04ccb3c6976
       - run:
-          working_directory: SmartCoffee-Data_Service/SmartCoffee-Data_Service
-          name: build solution
-          command: | 
-            dotnet restore
+          name: Install & Run SonarScan and publish to "docker.rayco.digital:9000"
+          command: |
+            mkdir -p /usr/share/man/man1 && apt-get update && apt-get install -y --no-install-recommends openjdk-11-jre-headless && rm -rf /var/lib/apt/lists/*
+            export JAVA_VER=11
+            export JAVA_HOME="/usr/lib/jvm/java-11-openjdk-amd64"
+            export PATH="${PATH}:/root/.dotnet/tools"
+            cd SmartCoffee-Data_Service/SmartCoffee-Data_Service
+            dotnet new tool-manifest --force
+            dotnet tool install dotnet-sonarscanner
+            dotnet sonarscanner begin /k:"RenseVS_SmartCoffee-Data"  /d:sonar.login=8f642fc97980302376b5044d4741e04ccb3c6976
             dotnet build
-      - dotnet-sonarscanner/sonar-end:
-          sonar_login: 8f642fc97980302376b5044d4741e04ccb3c6976
+            dotnet sonarscanner end /d:sonar.login=8f642fc97980302376b5044d4741e04ccb3c6976
+
 
   
 
