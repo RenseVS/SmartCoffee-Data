@@ -48,11 +48,6 @@ jobs:
       - image: 'node:latest'
     steps:
       - checkout
-      - run:
-          working_directory: SmartCoffee-Data_Service/SmartCoffee-Data_Service
-          name: build solution
-          command: | 
-            npm install
       - sonarcloud/scan:
           project_root: SmartCoffee-Data_Service/SmartCoffee-Data_Service
 
