@@ -54,8 +54,7 @@ jobs:
           command: | 
             dotnet restore
             dotnet build
-      - sonarcloud/scan:
-          project_root: SmartCoffee-Data_Service/SmartCoffee-Data_Service
+      - sonarcloud/scan
 
   
 
