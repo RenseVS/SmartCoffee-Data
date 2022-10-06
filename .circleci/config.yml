@@ -49,6 +49,7 @@ jobs:
     steps:
       - checkout
       - run:
+          working_directory: SmartCoffee-Data_Service
           name: build solution
           command: | 
             dotnet tool install --global dotnet-sonarscanner
