@@ -52,6 +52,7 @@ jobs:
       - run:
           name: Install & Run SonarScan and publish to sonarcloud
           command: |
+            dotnet new tool-manifest
             dotnet tool install dotnet-sonarscanner
             dotnet sonarscanner begin /o:"rensevs" /k:"RenseVS_SmartCoffee-Data" /d:sonar.host.url="https://sonarcloud.io" /d:sonar.login=8f642fc97980302376b5044d4741e04ccb3c6976
             dotnet build
