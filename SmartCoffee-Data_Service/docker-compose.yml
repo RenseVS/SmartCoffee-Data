@@ -3,6 +3,8 @@ version: '3.4'
 services:
   smartcoffee-data_service:
     image: ${DOCKER_REGISTRY-}smartcoffeedataservice
+    environment:
+        - ASPNETCORE_ENVIRONMENT=DEVELOPMENT
     build:
       context: .
       dockerfile: Dockerfile
