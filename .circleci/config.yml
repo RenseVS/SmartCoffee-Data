@@ -1,7 +1,7 @@
 version: 2.1
 
 orbs:
-  sonarcloud: sonarsource/sonarcloud@1.0.3
+  sonarcloud: sonarsource/sonarcloud@1.1.1
 
 jobs:
   build:
@@ -45,17 +45,12 @@ jobs:
       - checkout
   sonarqube:
     docker:
-      - image: mcr.microsoft.com/dotnet/sdk:6.0
+      - image: 'node:latest'
     steps:
       - checkout
-      - run:
-          working_directory: SmartCoffee-Data_Service/SmartCoffee-Data_Service
-          name: build solution
-          command: | 
-            apt-get install unzip
-            dotnet restore
-            dotnet build
-      - sonarcloud/scan
+      - sonarcloud/scan:
+          project_root: SmartCoffee-Data_Service/SmartCoffee-Data_Service
+
   
 
 workflows:
