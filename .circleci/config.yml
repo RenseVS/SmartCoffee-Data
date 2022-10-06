@@ -58,7 +58,7 @@ jobs:
             cd SmartCoffee-Data_Service/SmartCoffee-Data_Service
             dotnet new tool-manifest --force
             dotnet tool install dotnet-sonarscanner
-            dotnet sonarscanner begin /o=rensevs /k=RenseVS_SmartCoffee-Data /d:sonar.host.url="https://sonarcloud.io" /d:sonar.login=8f642fc97980302376b5044d4741e04ccb3c6976
+            dotnet sonarscanner begin /o:"rensevs" /k:"RenseVS_SmartCoffee-Data" /d:sonar.host.url="https://sonarcloud.io" /d:sonar.login=8f642fc97980302376b5044d4741e04ccb3c6976
             dotnet build
             dotnet sonarscanner end /d:sonar.login=8f642fc97980302376b5044d4741e04ccb3c6976
 
