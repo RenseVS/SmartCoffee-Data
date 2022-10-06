@@ -54,7 +54,6 @@ jobs:
           command: | 
             dotnet tool install --global dotnet-sonarscanner
             dotnet sonarscanner begin /k:"RenseVS_SmartCoffee-Data" /d:sonar.login="8f642fc97980302376b5044d4741e04ccb3c6976"
-            dotnet restore
             dotnet build
             dotnet sonarscanner end /d:sonar.login="8f642fc97980302376b5044d4741e04ccb3c6976"
 
